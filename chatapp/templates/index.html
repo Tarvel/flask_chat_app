@@ -46,7 +46,7 @@
         socket.on("chat", function(data) {
             let ul = document.getElementById("chat-messages");
             let li = document.createElement("li");
-            li.appendChild(document.createTextNode(data["message"]));
+            li.appendChild(document.createTextNode(data["username"] + ":" +data["message"]));
             ul.appendChild(li);
             ul.scrolltop = ul.scrollHeight;
         })
